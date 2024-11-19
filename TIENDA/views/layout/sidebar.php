@@ -1,42 +1,42 @@
+<div id="content">
+            <aside id="lateral">
+                <div id="login" class="block_aside">
+                    <h3>Entrar al sistema</h3>
+                    <form action="#">
+                        <label for="email">Email</label>
+                        <input type="email" name="email">
 
-<aside id="lateral">
-                    <div id="login" class="block_aside">
-                        <h3>Entar al Sistemas</h1>
+                        <label for="password">Contraseña</label>
+                        <input type="password" name="password">
 
-                            <form action="#">
+                        <input type="submit" value="Enviar">
+                    </form>
+                </div>
+            </aside>
 
-                                <label>Email
-                                    <input type="email">
-                                </label>
-                    
+            <div id="central">
+                <h1>Productos</h1>
+                <div class="product">
+                    <img src="ASSETS/IMG/Captura de Pantalla 2024-10-25 a la(s) 7.46.28 a.m..png" alt="">
+                    <h2>Veterinaria</h2>
+                    <p>1000 pesos</p>
+                    <a href="#" class="button">Comprar</a>
+                </div>
 
-                                <label>password
-                                    <input type="password">
-                                </label>
+                <div class="product">
+                    <img src="ASSETS/IMG/Captura de Pantalla 2024-10-25 a la(s) 7.46.28 a.m..png" alt="">
+                    <h2>Veterinaria</h2>
+                    <p>1000 pesos</p>
+                    <a href="#" class="button">Comprar</a>
+                </div>
 
-                                <input type="submit" value="enviar">
-                            </form>
-
-                    </div>
-                    
-
-                </aside>
-                <section>
-                    <h1>producto</h1>
-                    <div class="product">
-                        <h2>Veterinaria </h2>
-                        <img src="assets/img/perro.jpg" alt="">
-
-                        <p>Precion 2000</p>
-                        <a href="#" class="butin"> Comprar</a>
-                    </div>
-                    <div class="product">
-                        <h2>Veterinaria </h2>
-                        <img src="assets/img/perro.jpg" alt="">
-                        <p>Precion 2000</p>
-                        <a href="#" class="butin"> Comprar</a>
-                    </div>
-                </section>
+                <div class="product">
+                    <img src="ASSETS/IMG/Captura de Pantalla 2024-10-25 a la(s) 7.46.28 a.m..png" alt="">
+                    <h2>Veterinaria</h2>
+                    <p>1000 pesos</p>
+                    <a href="#" class="button">Comprar</a>
+                </div>
 
 
             </div>
+        </div>
