@@ -12,31 +12,32 @@ function Show_error()
     $error = new Errorcontroller();
     $error->index();
 }
-if (isset($_GET["controllers"])) {
-    $nombre_controlador = $_GET['controllers'] . 'controllers';
-} elseif (isset($_GET['controller']) && ($_GET['action'])) {
-    $nombre_controlador = $_GET['controllers'] . 'controllers';
+
+// Verificar si se especifica un controlador en la URL
+if (isset($_GET['controller'])) {
+    $nombre_controlador = $_GET['controller'] . 'Controller';
 } else {
-    Show_error();
-    exit();
+    // Usar el controlador y acción predeterminados
+    $nombre_controlador = controller_defauld;
 }
 
+// Verificar si el controlador existe
 if (class_exists($nombre_controlador)) {
     $controlador = new $nombre_controlador();
+
+    // Verificar si se especifica una acción en la URL
     if (isset($_GET['action']) && method_exists($controlador, $_GET['action'])) {
         $action = $_GET['action'];
         $controlador->$action();
-    } elseif (isset($_GET['controllers']) && !isset($_GET['action'])) {
+    } else {
+        // Usar la acción predeterminada si no se especifica ninguna
         $action_defauld = action_defauld;
         $controlador->$action_defauld();
-
     }
-    else{
-        Show_error();
-    }
-}
-else{
+} else {
+    // Mostrar un error si el controlador no existe
     Show_error();
 }
+
 require_once "views/layout/footer.php";
 ?>

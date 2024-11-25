@@ -1,8 +1,6 @@
 <?php
-class Errorcontroller
-{
-    public function index()
-    {
-        echo "<h1>Lapgina no eviste</h1>";
+class Errorcontroller {
+    public function index() {
+        echo "Página no encontrada.";
     }
 }
